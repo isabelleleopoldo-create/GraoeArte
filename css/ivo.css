@@ -1,0 +1,243 @@
+
+/* RESET E ESTILOS GERAIS */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: #fcfbfa; /* Fundo levemente bege/off-white */
+color: #333333;
+line-height: 1.6;
+}
+
+/* NAVBAR (MENU FIXO COM MARROM ESCURO) */
+.navbar {
+position: sticky;
+top: 0;
+z-index: 1000;
+background-color: #2b1810; /* Marrom escuro da marca */
+color: #ffffff;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 15px 50px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+font-size: 1.3rem;
+font-weight: bold;
+letter-spacing: 0.5px;
+}
+
+.navbar nav ul {
+display: flex;
+list-style: none;
+gap: 15px;
+}
+
+.navbar nav ul li a {
+color: #ffffff;
+text-decoration: none;
+font-size: 0.9rem;
+padding: 8px 16px;
+border-radius: 4px;
+transition: background-color 0.3s ease;
+}
+
+/* Efeito ativo e hover do menu */
+.navbar nav ul li a.active,
+.navbar nav ul li a:hover {
+background-color: #d25f25; /* Laranja acobreado do destaque do video */
+}
+
+/* SEÇÕES GENÉRICAS */
+.section {
+max-width: 1100px;
+margin: 0 auto;
+padding: 60px 20px;
+}
+
+.section-title {
+text-align: center;
+font-size: 1.8rem;
+color: #2b1810;
+margin-bottom: 40px;
+font-weight: 600;
+}
+
+/* SEÇÃO HERO (INÍCIO) */
+.hero-section {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 40px;
+min-height: 80vh;
+}
+
+.hero-content {
+flex: 1;
+}
+
+.hero-content h2 {
+font-size: 2rem;
+color: #2b1810;
+margin-bottom: 20px;
+}
+
+.hero-content p {
+color: #666666;
+font-size: 1.05rem;
+}
+
+.hero-image {
+flex: 1;
+}
+
+.hero-image img {
+width: 100%;
+max-width: 500px;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+display: block;
+}
+
+/* CARDS GRIDS (NOSSOS GRÃOS E CLUBE DE ASSINATURA) */
+.cards-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+gap: 25px;
+}
+
+.card {
+background-color: #ffffff;
+border: 1px solid #e2e2e2;
+border-radius: 8px;
+padding: 20px;
+text-align: left;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+transform: translateY(-3px);
+box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.card img {
+width: 100%;
+height: 180px;
+object-fit: cover;
+border-radius: 6px;
+margin-bottom: 15px;
+}
+
+.card h3 {
+font-size: 1.1rem;
+color: #2b1810;
+margin-bottom: 10px;
+}
+
+.card p {
+font-size: 0.9rem;
+color: #666666;
+}
+
+.pricing-card {
+text-align: center;
+padding: 30px 20px;
+}
+
+/* SEÇÃO TEXTO CENTRALIZADO (PROCESSO DE TORRA) */
+.text-center-section {
+text-align: center;
+max-width: 800px;
+}
+
+.text-center-section p {
+font-size: 1.05rem;
+color: #666666;
+}
+
+/* PERGUNTAS FREQUENTES (FAQ ACCORDION) */
+.faq-container {
+display: flex;
+flex-direction: column;
+gap: 12px;
+max-width: 800px;
+margin: 0 auto;
+}
+
+details {
+background-color: #ffffff;
+border: 1px solid #e2e2e2;
+border-radius: 6px;
+overflow: hidden;
+box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+}
+
+summary {
+padding: 16px 20px;
+font-weight: 600;
+color: #2b1810;
+cursor: pointer;
+list-style: none; /* Remove seta padrao */
+display: flex;
+align-items: center;
+}
+
+/* Ícone de seta personalizado */
+summary::before {
+content: "►";
+font-size: 0.75rem;
+margin-right: 12px;
+color: #2b1810;
+transition: transform 0.2s ease;
+}
+
+details[open] summary::before {
+transform: rotate(90deg);
+}
+
+.faq-content {
+padding: 0 20px 16px 40px;
+color: #555555;
+font-size: 0.92rem;
+border-top: 1px solid #f0f0f0;
+margin-top: 8px;
+padding-top: 12px;
+}
+
+/* BOTÃO FLUTUANTE WHATSAPP */
+.btn-whatsapp {
+position: fixed;
+bottom: 25px;
+right: 25px;
+background-color: #25d366; /* Verde do WhatsApp */
+color: #ffffff;
+padding: 10px 18px;
+border-radius: 20px;
+text-decoration: none;
+font-size: 0.85rem;
+font-weight: bold;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+z-index: 1000;
+transition: transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+transform: scale(1.05);
+}
+
+/* RODAPÉ */
+footer {
+background-color: #2b1810;
+color: #ffffff;
+text-align: right;
+padding: 15px 50px;
+font-size: 0.8rem;
+}
